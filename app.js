@@ -1,5 +1,5 @@
 // Question No 01
-function showAlert1() {
+function showBtn1() {
     let newPage = window.open("", "_ blank")
     var a = "10";
     newPage.document.write("The default value of a is:", a, "</br>");
@@ -25,11 +25,11 @@ function showAlert1() {
     newPage.document.write("Now The Value of a is:", a)
     newPage.document.write("</br>", "</br>", "</br>", "</br>");
 
-    newPage.document.write('--a - --b + ++b + b--')
+    newPage.document.write(console.log(--a - --b + ++b + b--))
 };
 
 // Quetion No 02
-function showAlert2() {
+function showBtn2() {
     let newPage = window.open("", "_ blank");
     var a = 2, b = 1;           //two variable
     newPage.document.write("value of A is ", a, "</br>", "value of B is ", b, "</br>", "</br>");
@@ -44,7 +44,7 @@ function showAlert2() {
 };
 
 // Quetion No 03
-function showAlert3() {
+function showBtn3() {
     var Name = prompt("Enter Your name");
     if (Name) {
         alert("Hi " + Name + " Nice to meet you")
@@ -54,28 +54,27 @@ function showAlert3() {
 };
 
 // Quetion No 04
-function showAlert4() {
+function showBtn4() {
     alert("There is no question")
 };
 
 // Quetion No 05
-function showAlert5() {
-    let Tabel = +prompt("Enter a number for multiplication table:");
-    let newPage = window.open("", "_ blank");
-
-    if (Tabel === "" || Tabel === null) {
-        Tabel = 5;
+function showBtn5() {
+    let table = prompt("Enter a number for multiplication table:");
+    
+    if (table === "" || table === null) {
+        table = 5;
     }
-
-    newPage.document.write("<h2>Multiplication Table of " + Tabel + "</h2>")
+    
+    document.write("<h2>Multiplication Table of " + table + "</h2>");
 
     for (let i = 1; i <= 10; i++) {
-        newPage.document.write(Tabel , "x" + i + "=" + (Tabel * i) + "</br>")
+        document.write(table + "x" + i + "=" + (table * i) + "</br>");
     }
 };
 
 // Quetion No 06
-function showAlert6() {
+function showBtn6() {
     let sub1 = prompt("Enter first Subject Name");
     let sub2 = prompt("Enter Secound Subject Name");
     let sub3 = prompt("Enter Third Subject Name");
@@ -87,9 +86,8 @@ function showAlert6() {
     let Mark3 = +prompt("Enter obtained marks " + sub3);
     let totalObtainedMarks = Mark1 + Mark2 + Mark3;
     let percentage = (totalObtainedMarks / (totalMarks * 3)) * 100;
-    
-    // Heading of the new page
 
+    
     document.write("<table border='1' cellpadding='10'>")
     document.write("<h1>Mark Sheet</h1>");
     document.write("<tr><th>Subjects</th><th>Tatal Marks</th><th>Obtained Marks</th></tr>");
@@ -100,5 +98,4 @@ function showAlert6() {
     document.write("</table>")
 
     document.write("<h3>Percentage: " + percentage.toFixed(2) + "%</h3>");
-
 };
